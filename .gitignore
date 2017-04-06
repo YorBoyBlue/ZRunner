@@ -23,6 +23,7 @@ ExportedObj/
 *.svd
 *.pdb
 
+
 # Unity3D generated meta files
 *.pidb.meta
 
@@ -32,7 +33,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+<<<<<<< HEAD
 *.exe
 /ZRunnerWebDemo/
 /ZombieRunner_Data/
 /ZRunner exe/
+=======
+>>>>>>> abc6ec5e7ac6291be07a0a37b86dd663f8b73ec4
