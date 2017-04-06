@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1197653941822190}
+  m_IsPrefabParent: 1
+--- !u!1 &1197653941822190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4348828829230042}
+  - component: {fileID: 54751183317377630}
+  - component: {fileID: 65547308327790078}
+  - component: {fileID: 114848135658028866}
+  m_Layer: 0
+  m_Name: PlatformSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4348828829230042
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197653941822190}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -58.16, y: -0.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54751183317377630
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197653941822190}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65547308327790078
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197653941822190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.502987, z: 9.638721}
+  m_Center: {x: 0, y: -0.86815095, z: -0.27993894}
+--- !u!114 &114848135658028866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197653941822190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120193759586bcd46907f64a5e141915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_scene: 1
+  m_maxScenes: 3
+  m_sewerPlatforms:
+  - {fileID: 1000012412033346, guid: 9c1408548b17b6b41b956925e479281e, type: 2}
+  - {fileID: 1000012944693880, guid: c20ce0ddb8c46404ea4d556b4809eeec, type: 2}
+  - {fileID: 1000011374269546, guid: 2cdb39e846736594cab3e31ce790b7d8, type: 2}
+  m_brickPlatforms:
+  - {fileID: 1000010260053750, guid: 98ebfe1da6cb68a47a869503eb1ce16c, type: 2}
+  - {fileID: 1000010260473796, guid: deff6457482630448a332d9bad713b80, type: 2}
+  - {fileID: 1000013630371740, guid: b6e8187644dee0e459e046bed4d6a6c6, type: 2}
+  m_rockPlatforms:
+  - {fileID: 1000014079440740, guid: fbcc8e8f43efc7e45b1a1db61777dfd8, type: 2}
+  - {fileID: 1000011478445152, guid: 2d927fe3e90ca6c4aa714bdcd7197d31, type: 2}
+  - {fileID: 1000011906255118, guid: cac01b02e7b514849ab1e5816b0e3f60, type: 2}
+  m_platformThemeLimit: 5
+  m_hasSpawned: 0
