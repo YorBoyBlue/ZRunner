@@ -394,7 +394,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 655701074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.79, y: -7.52, z: -1.4}
+  m_LocalPosition: {x: -37.62, y: -7.52, z: -1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1144704203}
@@ -577,6 +577,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012412033346, guid: 9c1408548b17b6b41b956925e479281e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1408548b17b6b41b956925e479281e, type: 2}
   m_IsPrefabParent: 0
@@ -732,7 +736,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011124056804, guid: 45dbffdaa98e625469d16674ffb9dba9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -55.26
+      value: -56.09
       objectReference: {fileID: 0}
     - target: {fileID: 4000011124056804, guid: 45dbffdaa98e625469d16674ffb9dba9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -873,16 +877,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114268894800190726, guid: 165924f045ea5804e9deddb8381642db,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2087470462}
-    - target: {fileID: 114037608836503402, guid: 165924f045ea5804e9deddb8381642db,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2087470462}
     - target: {fileID: 114532996721227642, guid: 165924f045ea5804e9deddb8381642db,
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -891,6 +885,16 @@ Prefab:
     - target: {fileID: 114532996721227642, guid: 165924f045ea5804e9deddb8381642db,
         type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2087470462}
+    - target: {fileID: 114037608836503402, guid: 165924f045ea5804e9deddb8381642db,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2087470462}
+    - target: {fileID: 114268894800190726, guid: 165924f045ea5804e9deddb8381642db,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2087470462}
     m_RemovedComponents: []
@@ -1050,6 +1054,10 @@ Prefab:
       propertyPath: m_textBox
       value: 
       objectReference: {fileID: 556676654}
+    - target: {fileID: 1000010946527860, guid: 1a9e933c8ff32384c9a3c6672e2f14c0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a9e933c8ff32384c9a3c6672e2f14c0, type: 2}
   m_IsPrefabParent: 0

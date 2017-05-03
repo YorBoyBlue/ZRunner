@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleStamina() {
 		if(m_running || m_runningJump && !m_jogging || Input.GetKey(KeyCode.LeftShift) && m_stamina <= 0 || Input.GetKey(KeyCode.D) && m_stamina <= 0) {
-			m_stamina -= 21f * Time.deltaTime;
+			m_stamina -= 18f * Time.deltaTime;
 		} else if (m_jogging && m_stamina < m_maxStamina || m_jump && m_stamina < m_maxStamina) {
 			m_stamina += 14f * Time.deltaTime;
 		}
@@ -209,9 +209,14 @@ public class PlayerController : MonoBehaviour {
 			m_shoot = false;
 			m_readyToShoot = false;
 		}
-		if(!m_shoot) {
-			m_gun.gameObject.SetActive(false);
-		}
+	}
+
+	public void ActivateGun() {
+		m_gun.gameObject.SetActive(true);
+	}
+
+	public void DeactivateGun() {
+		m_gun.gameObject.SetActive(false);
 	}
 
 	void HandleJumping() {
@@ -299,7 +304,6 @@ public class PlayerController : MonoBehaviour {
 				m_jump = false;
 				m_runningJump = false;
 				m_shoot = true;
-				m_gun.gameObject.SetActive(true);
 				Instantiate(m_bullet, m_bulletSpawn.position, m_bulletSpawn.rotation);
 				m_animator.SetBool("shoot", true);
 				m_ammo --;
@@ -363,7 +367,6 @@ public class PlayerController : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.F)) {
 			if(!m_running) {
 				if(m_readyToShoot && m_grounded && m_ammo > 0) {
-					m_gunShotSource.PlayOneShot(m_gunShotSound, 4.0f);
 					m_jogging = false;
 					m_running = false;
 					m_jump = false;

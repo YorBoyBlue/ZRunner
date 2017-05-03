@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
@@ -9,6 +11,11 @@ public class MainMenu : MonoBehaviour {
 	public AudioClip m_zombieIntroAudio;
 	public GameObject m_controlsScreen;
 	public GameObject m_creditsScreen;
+	public Button m_playButton;
+	public Button m_controlsButton;
+	public Button m_creditsButton;
+	public Button m_exitButton;
+	public GameObject m_loadingCircle;
 
 	void Start() {
 		m_audioSource.PlayOneShot(m_mainMenuAudio, 0.1f);
@@ -16,7 +23,12 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void PlayGame() {
-		SceneManager.LoadScene("Main");
+		m_loadingCircle.SetActive(true);
+		SceneManager.LoadSceneAsync("Main");
+		m_playButton.interactable = false;
+		m_controlsButton.interactable = false;
+		m_creditsButton.interactable = false;
+		m_exitButton.interactable = false;
 	}
 
 	public void DisplayCredits() {

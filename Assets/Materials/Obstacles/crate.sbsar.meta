@@ -6,8 +6,8 @@ labels:
 - Procedural
 - Sci-fi
 - Crate
-timeCreated: 1482440423
-licenseType: Pro
+timeCreated: 1493786636
+licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
@@ -644,7 +644,7 @@ SubstanceImporter:
       textureWidth: 2048
       textureHeight: 2048
       textureFormat: 0
-      loadingBehavior: 1
+      loadingBehavior: 2
   deletedPrototypes: []
   userData: 
   assetBundleName: 

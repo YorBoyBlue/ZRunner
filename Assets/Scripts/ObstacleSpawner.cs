@@ -18,7 +18,7 @@ public class ObstacleSpawner : MonoBehaviour {
 
 	void Update() {
 		if(m_spawnTimerAmount > m_minSpawnTimer) {
-			m_spawnTimerAmount -= 0.0005f;
+			m_spawnTimerAmount -= 0.01f * Time.deltaTime;
 		}
 		m_spawnTimer -= Time.deltaTime;
 		if(m_spawnTimer <= 0) {
