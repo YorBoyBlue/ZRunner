@@ -1,0 +1,1 @@
+Just play the .exe with the Data file in the same folder.

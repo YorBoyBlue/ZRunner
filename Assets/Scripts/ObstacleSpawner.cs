@@ -17,9 +17,13 @@ public class ObstacleSpawner : MonoBehaviour {
 	}
 
 	void Update() {
+		// this is decrementing the amount the spawn timer is 
+		// reset to very slowly. 
 		if(m_spawnTimerAmount > m_minSpawnTimer) {
 			m_spawnTimerAmount -= 0.01f * Time.deltaTime;
 		}
+		// this is the spawn timer system that counts down, 
+		// spawns, and resets to the current spawn timer amount.
 		m_spawnTimer -= Time.deltaTime;
 		if(m_spawnTimer <= 0) {
 			SpawnObstacle();
@@ -30,8 +34,8 @@ public class ObstacleSpawner : MonoBehaviour {
 	void SpawnObstacle() {
 		int rand = Random.Range(0, m_obstacles.Length);
 		Instantiate(m_obstacles[rand], m_spawnPosition, m_spawnRotation);
-		if(m_obstacles[rand].gameObject.tag == null) {
-			m_obstacles[rand].gameObject.tag = "Environment";
-		}
+		// if(m_obstacles[rand].gameObject.tag == null) {
+		// 	m_obstacles[rand].gameObject.tag = "Environment";
+		// }
 	}
 }
