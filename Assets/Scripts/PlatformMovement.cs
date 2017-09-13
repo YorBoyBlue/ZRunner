@@ -37,7 +37,7 @@ public class PlatformMovement : MonoBehaviour {
 				} else {
 					m_speed = m_jogSpeed;
 				}
-			}			
+			}
 		} else {
 			m_speed = m_jogSpeed;
 		}

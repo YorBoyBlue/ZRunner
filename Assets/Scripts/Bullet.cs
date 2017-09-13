@@ -28,8 +28,9 @@ public class Bullet : MonoBehaviour {
     }
 
     void Update() {
-        m_bulletStreamDelay -= Time.deltaTime;
-        if(m_bulletStreamDelay <= 0) {
+        if(m_bulletStreamDelay >= 0) {
+            m_bulletStreamDelay -= Time.deltaTime;
+        } else if(m_bulletStream.activeSelf == false) {
            m_bulletStream.SetActive(true);
         }
     }

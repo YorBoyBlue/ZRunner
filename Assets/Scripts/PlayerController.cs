@@ -18,21 +18,11 @@ public class PlayerController : MonoBehaviour {
 
 	// Audio TODO: Seperate some into Audio Script
 	//public AudioSource m_jumpSource;
-	public AudioSource m_backgroundSource;
+	// public AudioSource m_backgroundSource;
 	public AudioSource m_gunShotSource;
 	public AudioSource m_reloadSource;
-	public AudioSource m_zombie1Source;
-	public AudioSource m_zombie2Source;
-	public AudioSource m_zombie3Source;
-	public AudioSource m_zombie4Source;
-	//public AudioClip m_jumpSound;
-	public AudioClip m_backgroundSound;
 	public AudioClip m_gunShotSound;
 	public AudioClip m_reloadSound;
-	public AudioClip m_zombie1Sound;
-	public AudioClip m_zombie2Sound;
-	public AudioClip m_zombie3Sound;
-	public AudioClip m_zombie4Sound;
 
 	// Scoring
 	public float m_score;
@@ -76,6 +66,9 @@ public class PlayerController : MonoBehaviour {
 	public bool	m_runningJump = false;
 	public bool m_canJump = true;
 
+	// Zombies
+	[SerializeField] GameObject m_zombies;
+
 	// Animator
 	private Animator m_animator;
 
@@ -90,11 +83,6 @@ public class PlayerController : MonoBehaviour {
 		m_gun.gameObject.SetActive(false);
 		m_rb = GetComponent<Rigidbody>();
 		m_animator = GetComponent<Animator>();
-		m_backgroundSource.PlayOneShot(m_backgroundSound, 0.5f);
-		m_zombie1Source.PlayOneShot(m_zombie1Sound);
-		m_zombie2Source.PlayOneShot(m_zombie2Sound);
-		m_zombie3Source.PlayOneShot(m_zombie3Sound);
-		m_zombie4Source.PlayOneShot(m_zombie4Sound);
 	}
 
 	void Update() {
@@ -181,8 +169,9 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleShooting() {
 		if(!m_readyToShoot) {
-			m_bulletSpawnDelay -= Time.deltaTime;
-			if(m_bulletSpawnDelay <= 0) {
+			if(m_bulletSpawnDelay >= 0) {
+				m_bulletSpawnDelay -= Time.deltaTime;
+			} else {
 				m_readyToShoot = true;
 				m_shoot = false;
 				m_bulletSpawnDelay = m_maxBulletSpawnDelay;
@@ -191,8 +180,9 @@ public class PlayerController : MonoBehaviour {
 		if(m_ammo > 0) {
 			m_outOfAmmoMessage.gameObject.SetActive(false);
 			if(m_shoot && m_readyToShoot) {
-				m_bulletSpawnDelay -= Time.deltaTime;
-				if(m_bulletSpawnDelay <= 0) {
+				if(m_bulletSpawnDelay >= 0) {
+					m_bulletSpawnDelay -= Time.deltaTime;
+				} else {
 					Shoot();
 					m_readyToShoot = false;
 					m_bulletSpawnDelay = m_maxBulletSpawnDelay;

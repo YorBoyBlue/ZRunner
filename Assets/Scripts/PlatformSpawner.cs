@@ -42,24 +42,24 @@ public class PlatformSpawner : MonoBehaviour {
 					Instantiate(m_sewerPlatforms[rand], spawnPos, m_spawnRotation);
 					m_hasSpawned = true;
 				}		
-			break;
+				break;
 
 			case 2:
 				if(!m_hasSpawned) {
 					Instantiate(m_brickPlatforms[rand], spawnPos, m_spawnRotation);
 					m_hasSpawned = true;
 				}
-			break;
+				break;
 
 			case 3:
 				if(!m_hasSpawned) {
 					Instantiate(m_rockPlatforms[rand], spawnPos, m_spawnRotation);
 					m_hasSpawned = true;
 				}
-			break;
+				break;
 
 			default:
-			break;
+				break;
 		}
 	}
 }
