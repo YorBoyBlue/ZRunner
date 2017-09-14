@@ -3,17 +3,14 @@
 public class ObstacleSpawner : MonoBehaviour {
 
 	public GameObject[] m_obstacles;
-	private Quaternion m_spawnRotation;
+	private Quaternion m_spawnRotation = Quaternion.Euler(0, -90, 0);
 	private Vector3 m_spawnPosition;
-	private float m_spawnTimerAmount;
-	private float m_minSpawnTimer;
+	private float m_spawnTimerAmount = 8.0f;
+	private float m_minSpawnTimer = 2.0f;
 	public float m_spawnTimer;
 
 	void Start() {
-		m_spawnRotation = Quaternion.Euler(0, -90, 0);
 		m_spawnPosition = transform.position;
-		m_spawnTimerAmount = 8.0f;
-		m_minSpawnTimer = 2.0f;
 	}
 
 	void Update() {

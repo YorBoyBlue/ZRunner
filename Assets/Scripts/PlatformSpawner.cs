@@ -9,15 +9,9 @@ public class PlatformSpawner : MonoBehaviour {
 	public GameObject[] m_rockPlatforms;
 	public int m_platformThemeLimit = 5;
 	private int m_maxPlatformThemeLimit = 5;
-	private Quaternion m_spawnRotation;
-	private Vector3 m_spawnPosition;
-	public bool m_hasSpawned;
-	
-	void Start() {
-		m_spawnRotation = Quaternion.identity;
-		m_spawnPosition = Vector3.zero;
-		m_hasSpawned = false;
-	}
+	private Quaternion m_spawnRotation = Quaternion.identity;
+	private Vector3 m_spawnPosition = Vector3.zero;
+	public bool m_hasSpawned = false;
 
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "Platform") {

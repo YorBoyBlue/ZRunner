@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Scoring
 	public float m_score;
-	private ScoreTracker m_scoreScript;
+	[SerializeField] ScoreTracker m_scoreScript;
 
 	// Shooting Stuff
 	public GameObject m_gun;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject m_staminaBar;
 	public float m_stamina = 100.0f;
 	private float m_maxStamina = 100.0f;
-	private Vector3 m_playerSpeed;
+	private Vector3 m_playerSpeed = new Vector3(0, 0, 1.5f);
 	private float m_currentPosX;
 	private float m_maxPosX = -43.0f;
 
@@ -70,19 +70,13 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] GameObject m_zombies;
 
 	// Animator
-	private Animator m_animator;
+	[SerializeField] Animator m_animator;
 
 	// Rigidbody
-	private Rigidbody m_rb;
+	[SerializeField] Rigidbody m_rb;
 
 	void Start() {
-		m_score = GetComponent<ScoreTracker>().GetScore();
-		m_scoreScript = GetComponent<ScoreTracker>();
-		m_playerSpeed = new Vector3(0, 0, 1.5f);
-		m_outOfAmmoMessage.gameObject.SetActive(false);
-		m_gun.gameObject.SetActive(false);
-		m_rb = GetComponent<Rigidbody>();
-		m_animator = GetComponent<Animator>();
+		m_score = m_scoreScript.GetScore();
 	}
 
 	void Update() {

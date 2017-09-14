@@ -45,6 +45,8 @@ public class GameOver : MonoBehaviour {
 	// Try Again Screen
 	public GameObject m_tryAgainScreen;
 
+	public GameObject m_loadingCircle;
+
 	void Start() {
 		m_score = PlayerPrefs.GetInt("Score");
 		m_highScore = PlayerPrefs.GetInt("High Score");
@@ -119,7 +121,8 @@ public class GameOver : MonoBehaviour {
 	}
 
 	public void TryAgain() {
-		SceneManager.LoadScene("Main");
+		m_loadingCircle.SetActive(true);
+		SceneManager.LoadSceneAsync("Main");
 	}
 
 	public void Exit() {

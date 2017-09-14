@@ -2727,6 +2727,7 @@ MonoBehaviour:
   m_gunShotSound: {fileID: 8300000, guid: 4b5ba36c64b433f448779a10e8185fde, type: 3}
   m_reloadSound: {fileID: 8300000, guid: ffada66f4a6ed3f419cb03d413629c0c, type: 3}
   m_score: 0
+  m_scoreScript: {fileID: 114000010553201796}
   m_gun: {fileID: 1000010946527860}
   m_outOfAmmoMessage: {fileID: 0}
   m_bulletSpawn: {fileID: 4000013861209628}
@@ -2747,6 +2748,8 @@ MonoBehaviour:
   m_runningJump: 0
   m_canJump: 1
   m_zombies: {fileID: 1901170939882938, guid: 90a1ee0a48898df4eb9e7af4f95893e6, type: 2}
+  m_animator: {fileID: 95000010423425576}
+  m_rb: {fileID: 54000011911480306}
 --- !u!136 &136000010340608922
 CapsuleCollider:
   m_ObjectHideFlags: 1

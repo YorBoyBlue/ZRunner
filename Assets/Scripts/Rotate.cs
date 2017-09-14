@@ -3,12 +3,13 @@
 public class Rotate : MonoBehaviour {
 
 	private Quaternion m_rotation;
-	private Vector3 m_rotationSpeed;
-	private Rigidbody m_rb;
+	private Vector3 m_rotationSpeed = new Vector3(0, 150, 0);
+	[SerializeField] Rigidbody m_rb;
 
 	void Start() {
-		m_rb = GetComponent<Rigidbody>();
-		m_rotationSpeed = new Vector3(0, 150, 0);
+		if(m_rb == null) {
+			m_rb = GetComponent<Rigidbody>();
+		}
 	} 
 	
 	void FixedUpdate () {
