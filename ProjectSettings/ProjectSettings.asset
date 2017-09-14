@@ -123,13 +123,7 @@ PlayerSettings:
     16:9: 1
     Others: 0
   bundleVersion: 1.0
-  preloadedAssets:
-  - {fileID: 1000010294402382, guid: 1a29ee681750ad74aababc464ce6ba1b, type: 2}
-  - {fileID: 1000012378005090, guid: 21cfe9d7e6dd80946b92c66129fb5a9d, type: 2}
-  - {fileID: 1000012203638646, guid: 33bee070a988f0844805d36cdba44ba3, type: 2}
-  - {fileID: 1000013920146138, guid: 3c7c6868ce9662c44a3e3f704ef87a7b, type: 2}
-  - {fileID: 1000011504632970, guid: e1adf0edbb7f9fa45a64c086a4eb14f4, type: 2}
-  - {fileID: 1000013949803920, guid: 1a9e933c8ff32384c9a3c6672e2f14c0, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0

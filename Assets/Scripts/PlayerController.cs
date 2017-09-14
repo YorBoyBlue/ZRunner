@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 
 	void PlayerMovement() {
 		m_currentPosX = transform.position.x;
-		if(m_jogging || m_stamina <= 0 || m_jump) {
+		if(m_jogging || m_stamina <= 0) {
 			transform.Translate((-m_playerSpeed * Time.fixedDeltaTime) * 0.6f);
 		} else if (m_running && m_stamina > 0 || m_runningJump && m_stamina > 0) {
 			if(m_currentPosX < m_maxPosX) {
